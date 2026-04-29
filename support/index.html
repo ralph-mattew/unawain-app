@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — UNAWAIN</title>
+    <style>
+        :root {
+            --teal: #00897B;
+            --brown: #5D4E37;
+            --brown-light: #8D7B6A;
+            --cream: #FFF8F0;
+            --gold: #C49A2A;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            background: var(--cream);
+            color: var(--brown);
+            line-height: 1.7;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--teal), #00695C);
+            color: white;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .header h1 { font-size: 1.8rem; letter-spacing: 2px; }
+        .header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
+        .header a:hover { color: white; }
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 24px 64px;
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: var(--teal);
+            margin-top: 32px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(0,137,123,0.15);
+        }
+        h3 { font-size: 1.05rem; margin-top: 20px; margin-bottom: 8px; }
+        p { margin-bottom: 14px; font-size: 0.95rem; }
+        ul, ol { margin: 12px 0 16px 24px; }
+        li { margin-bottom: 8px; font-size: 0.95rem; }
+        a { color: var(--teal); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .contact-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            margin: 24px 0;
+            border: 1px solid rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .contact-card .email {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--teal);
+            margin: 12px 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        .faq-item .q {
+            font-weight: 700;
+            color: var(--brown);
+            margin-bottom: 8px;
+        }
+        .faq-item .a { color: var(--brown-light); }
+        .highlight {
+            background: #E0F2F1;
+            border-left: 4px solid var(--teal);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.85rem;
+            color: var(--brown-light);
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="../">&larr; UNAWAIN</a>
+        <h1>Support</h1>
+    </div>
+
+    <div class="content">
+        <h2>Kailangan mo ba ng tulong? (Need Help?)</h2>
+
+        <div class="contact-card">
+            <p>Mag-email sa amin para sa anumang tanong o problema:</p>
+            <div class="email"><a href="mailto:ralphmattew@gmail.com">ralphmattew@gmail.com</a></div>
+            <p style="font-size: 0.85rem; color: var(--brown-light);">Sasagutin namin sa loob ng 48 oras.</p>
+        </div>
+
+        <h2>Mga Madalas na Tanong (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="q">Kailangan ba ng internet ang UNAWAIN?</div>
+            <div class="a">Hindi. Pagkatapos i-download ang AI modelo sa unang pagbukas (isang beses lang), 100% offline na ang lahat. Hindi kailangan ng internet para mag-scan, mag-upload, o mag-analyze ng dokumento.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">Gaano kalaki ang AI modelo?</div>
+            <div class="a">Ang Qwen 2.5 1.5B ay ~1.1 GB (awtomatikong dina-download). Ang Gemma 3 4B ay ~2.5 GB (opsyonal, mas mataas na kalidad). Maaari mong i-delete anumang oras.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">Anong iPhone ang kailangan?</div>
+            <div class="a">iPhone 13 o mas bago (4 GB RAM o higit pa). Mas mabilis ang pagsusuri sa iPhone 14 at mas bago (6 GB+ RAM). Kailangan ng iOS 26.0 o mas bago.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">Tama ba palagi ang buod ng AI?</div>
+            <div class="a">Ang AI ay maaaring magkamali. Ang UNAWAIN ay tool para tumulong sa pag-unawa — hindi pamalit sa propesyonal na payo. Palaging i-verify ang mahahalagang impormasyon, lalo na para sa legal o financial na mga dokumento.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">Paano kung puno na ang history?</div>
+            <div class="a">Maximum na 200 resulta ang nase-save. May warning kapag malapit na sa limit. Maaari mong i-delete ang mga luma sa History o i-set ang auto-retention (30 o 90 araw) sa Settings.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">Magkano ang UNAWAIN?</div>
+            <div class="a">Libre ang unang 5 document analyses. Pagkatapos, PHP 199 para sa Lifetime Access — isang beses lang bayaran, sa iyo na habambuhay. Walang subscription o recurring charges.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">Ligtas ba ang data ko?</div>
+            <div class="a">Oo. Ang UNAWAIN ay 100% on-device. Walang server, walang cloud, walang data collection. Ang lahat ng dokumento at resulta ay nananatili sa iyong device at pinoprotektahan ng device encryption (Face ID, passcode, etc.).</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">Paano mag-refund?</div>
+            <div class="a">Ang refunds ay hinahandle ng Apple. Pumunta sa <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> o kontakin ang Apple Support.</div>
+        </div>
+
+        <h2>Troubleshooting</h2>
+
+        <h3>Hindi naglo-load ang AI modelo</h3>
+        <ul>
+            <li>Siguraduhing may sapat na storage (at least 2 GB na libre)</li>
+            <li>Siguraduhing may internet connection para sa unang download</li>
+            <li>Subukang i-restart ang app</li>
+            <li>Kung naka-VPN, subukang i-off muna</li>
+        </ul>
+
+        <h3>Mabagal ang pagsusuri</h3>
+        <ul>
+            <li>Normal ang 15-60 segundo depende sa haba ng dokumento at device</li>
+            <li>Ang unang pagsusuri pagkatapos buksan ang app ay mas matagal (naglo-load ang modelo)</li>
+            <li>Sa 4 GB devices (iPhone 13), mas matagal kaysa sa 8 GB+ devices</li>
+            <li>Subukang isara ang ibang apps para magpalaya ng memory</li>
+        </ul>
+
+        <h3>Hindi malinaw ang OCR / text extraction</h3>
+        <ul>
+            <li>Siguraduhing maliwanag ang lighting kapag nag-scan</li>
+            <li>I-flatten ang dokumento — iwasan ang mga tiklop at kulubot</li>
+            <li>Subukang i-crop ang larawan para sa mas magandang resulta</li>
+            <li>Para sa PDF, mas mataas ang kalidad ng text extraction</li>
+        </ul>
+
+        <h3>Nag-crash ang app</h3>
+        <ul>
+            <li>I-restart ang app at subukan muli</li>
+            <li>Siguraduhing updated ang iOS sa pinakabagong bersyon</li>
+            <li>Kung paulit-ulit, mag-email sa amin na may detalye ng device at kung ano ang ginagawa mo nang ma-crash</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>Tip:</strong> Kapag nag-email, isama ang iyong device model (hal. iPhone 15 Pro), iOS version, at UNAWAIN version (makikita sa Settings > Bersyon). Mas mabilis kaming makakatulong!
+        </div>
+
+        <h2>About UNAWAIN</h2>
+        <p><strong>UNAWAIN</strong> — mula sa salitang Filipinong "unawa" na nangangahulugang pag-intindi o pagkaunawa.</p>
+        <p>Ang UNAWAIN ay tumutulong sa mga Pilipino na maunawaan ang anumang dokumento o audio, gamit ang kapangyarihan ng on-device AI. Ang disenyo ay inspirado ng Solihiya — ang tradisyonal na Filipino weaving pattern.</p>
+        <p>Ginawa nang may pagmamahal sa Pilipinas.</p>
+    </div>
+
+    <footer>
+        <p><a href="../">UNAWAIN</a> &middot; <a href="../privacy/">Privacy Policy</a> &middot; <a href="../terms/">Terms of Use</a></p>
+        <p style="margin-top: 8px;">&copy; 2025 Ralph Mattew Palomaria</p>
+    </footer>
+</body>
+</html>
