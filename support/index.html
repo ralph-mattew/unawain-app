@@ -1,198 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fil">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support — UNAWAIN</title>
-    <style>
-        :root {
-            --teal: #00897B;
-            --brown: #5D4E37;
-            --brown-light: #8D7B6A;
-            --cream: #FFF8F0;
-            --gold: #C49A2A;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
-            background: var(--cream);
-            color: var(--brown);
-            line-height: 1.7;
-        }
-        .header {
-            background: linear-gradient(135deg, var(--teal), #00695C);
-            color: white;
-            padding: 40px 24px;
-            text-align: center;
-        }
-        .header h1 { font-size: 1.8rem; letter-spacing: 2px; }
-        .header a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; }
-        .header a:hover { color: white; }
-        .content {
-            max-width: 680px;
-            margin: 0 auto;
-            padding: 40px 24px 64px;
-        }
-        h2 {
-            font-size: 1.3rem;
-            color: var(--teal);
-            margin-top: 32px;
-            margin-bottom: 12px;
-            padding-bottom: 6px;
-            border-bottom: 2px solid rgba(0,137,123,0.15);
-        }
-        h3 { font-size: 1.05rem; margin-top: 20px; margin-bottom: 8px; }
-        p { margin-bottom: 14px; font-size: 0.95rem; }
-        ul, ol { margin: 12px 0 16px 24px; }
-        li { margin-bottom: 8px; font-size: 0.95rem; }
-        a { color: var(--teal); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .contact-card {
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            margin: 24px 0;
-            border: 1px solid rgba(0,0,0,0.06);
-            text-align: center;
-        }
-        .contact-card .email {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--teal);
-            margin: 12px 0;
-        }
-        .faq-item {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 12px;
-            border: 1px solid rgba(0,0,0,0.06);
-        }
-        .faq-item .q {
-            font-weight: 700;
-            color: var(--brown);
-            margin-bottom: 8px;
-        }
-        .faq-item .a { color: var(--brown-light); }
-        .highlight {
-            background: #E0F2F1;
-            border-left: 4px solid var(--teal);
-            padding: 16px 20px;
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
-        }
-        footer {
-            text-align: center;
-            padding: 24px;
-            font-size: 0.85rem;
-            color: var(--brown-light);
-            border-top: 1px solid rgba(0,0,0,0.08);
-        }
-    </style>
+    <meta name="description" content="UNAWAIN Support. FAQ, troubleshooting, at contact information.">
+    <meta name="theme-color" content="#00695C">
+    <link rel="icon" type="image/png" href="../assets/img/appicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <div class="header">
-        <a href="../">&larr; UNAWAIN</a>
-        <h1>Support</h1>
+
+<nav class="site-nav">
+    <div class="nav-inner">
+        <a href="../" class="nav-brand"><img src="../assets/img/appicon.png" alt="UNAWAIN" class="nav-icon">UNAWAIN</a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        <ul class="nav-links">
+            <li><a href="../">Home</a></li>
+            <li><a href="../privacy/">Privacy</a></li>
+            <li><a href="../terms/">Terms</a></li>
+            <li><a href="../support/">Suporta</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="legal-header">
+    <h1>Suporta</h1>
+    <p>FAQ, troubleshooting, at contact</p>
+</div>
+
+<div class="legal-body">
+    <div class="contact-card">
+        <h2>Kailangan mo ng tulong?</h2>
+        <p>Kung may tanong o problema ka sa UNAWAIN, huwag mag-atubiling mag-email sa amin. Sasagutin namin sa loob ng 48 oras.</p>
+        <a href="mailto:ralphmattew@gmail.com" class="contact-btn">Email: ralphmattew@gmail.com</a>
     </div>
 
-    <div class="content">
-        <h2>Kailangan mo ba ng tulong? (Need Help?)</h2>
+    <h2>Frequently Asked Questions</h2>
 
-        <div class="contact-card">
-            <p>Mag-email sa amin para sa anumang tanong o problema:</p>
-            <div class="email"><a href="mailto:ralphmattew@gmail.com">ralphmattew@gmail.com</a></div>
-            <p style="font-size: 0.85rem; color: var(--brown-light);">Sasagutin namin sa loob ng 48 oras.</p>
-        </div>
+    <div class="faq-card">
+        <h3>Kailangan ba ng internet ang UNAWAIN?</h3>
+        <p>Hindi. Pagkatapos i-download ang AI modelo (isang beses lang), 100% offline na ang lahat. Walang data na ipinapadala sa kahit anong server.</p>
+    </div>
 
-        <h2>Mga Madalas na Tanong (FAQ)</h2>
+    <div class="faq-card">
+        <h3>Gaano kalaki ang AI modelo?</h3>
+        <p>Depende sa iyong device: Gemma 4 E2B ay ~3.5 GB (6-8 GB devices), Gemma 4 E4B ay ~5.4 GB (12 GB+ devices), at Qwen 2.5 1.5B ay ~1.1 GB (4 GB devices). Maaari mong i-delete ang modelo anumang oras sa Settings.</p>
+    </div>
 
-        <div class="faq-item">
-            <div class="q">Kailangan ba ng internet ang UNAWAIN?</div>
-            <div class="a">Hindi. Pagkatapos i-download ang AI modelo sa unang pagbukas (isang beses lang), 100% offline na ang lahat. Hindi kailangan ng internet para mag-scan, mag-upload, o mag-analyze ng dokumento.</div>
-        </div>
+    <div class="faq-card">
+        <h3>Anong iPhone ang kailangan?</h3>
+        <p>iPhone 13 o mas bago (4 GB RAM minimum), iOS 26.0+. Mas mabilis ang performance sa iPhone 14+ na may 6 GB+ RAM.</p>
+    </div>
 
-        <div class="faq-item">
-            <div class="q">Gaano kalaki ang AI modelo?</div>
-            <div class="a">Ang Qwen 2.5 1.5B ay ~1.1 GB (awtomatikong dina-download). Ang Gemma 3 4B ay ~2.5 GB (opsyonal, mas mataas na kalidad). Maaari mong i-delete anumang oras.</div>
-        </div>
+    <div class="faq-card">
+        <h3>Tama ba palagi ang AI summary?</h3>
+        <p>Hindi palagi. Ang AI ay maaaring magkamali. Ang UNAWAIN ay tool para tumulong sa pag-unawa — hindi pamalit sa propesyonal na payo. Palaging i-verify ang mahahalagang impormasyon.</p>
+    </div>
 
-        <div class="faq-item">
-            <div class="q">Anong iPhone ang kailangan?</div>
-            <div class="a">iPhone 13 o mas bago (4 GB RAM o higit pa). Mas mabilis ang pagsusuri sa iPhone 14 at mas bago (6 GB+ RAM). Kailangan ng iOS 26.0 o mas bago.</div>
-        </div>
+    <div class="faq-card">
+        <h3>Paano kung puno na ang history ko?</h3>
+        <p>Maximum na 200 ang nase-save na resulta. May warning kapag malapit na sa 180. Maaari mong i-delete ang mga luma o i-set ang auto-retention sa Settings (30 araw, 90 araw, o walang auto-delete).</p>
+    </div>
 
-        <div class="faq-item">
-            <div class="q">Tama ba palagi ang buod ng AI?</div>
-            <div class="a">Ang AI ay maaaring magkamali. Ang UNAWAIN ay tool para tumulong sa pag-unawa — hindi pamalit sa propesyonal na payo. Palaging i-verify ang mahahalagang impormasyon, lalo na para sa legal o financial na mga dokumento.</div>
-        </div>
+    <div class="faq-card">
+        <h3>Libre ba ang UNAWAIN?</h3>
+        <p>May libreng 5 document analyses at 5 minuto ng audio recording. Para sa unlimited access, PHP 199 lang — isang beses lang bayaran, sa iyo na habambuhay. Walang subscription o hidden fees.</p>
+    </div>
 
-        <div class="faq-item">
-            <div class="q">Paano kung puno na ang history?</div>
-            <div class="a">Maximum na 200 resulta ang nase-save. May warning kapag malapit na sa limit. Maaari mong i-delete ang mga luma sa History o i-set ang auto-retention (30 o 90 araw) sa Settings.</div>
-        </div>
+    <div class="faq-card">
+        <h3>Paano ko mare-restore ang purchase sa bagong device?</h3>
+        <p>Pumunta sa Settings at i-tap ang "Restore Purchases". Gagamitin ang iyong Apple ID para i-verify ang dating purchase — walang additional charge.</p>
+    </div>
 
-        <div class="faq-item">
-            <div class="q">Magkano ang UNAWAIN?</div>
-            <div class="a">Libre ang unang 5 document analyses. Pagkatapos, PHP 199 para sa Lifetime Access — isang beses lang bayaran, sa iyo na habambuhay. Walang subscription o recurring charges.</div>
-        </div>
+    <div class="faq-card">
+        <h3>Paano mag-request ng refund?</h3>
+        <p>Ang refund ay handled ng Apple. Pumunta sa <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> o kontakin ang Apple Support.</p>
+    </div>
 
-        <div class="faq-item">
-            <div class="q">Ligtas ba ang data ko?</div>
-            <div class="a">Oo. Ang UNAWAIN ay 100% on-device. Walang server, walang cloud, walang data collection. Ang lahat ng dokumento at resulta ay nananatili sa iyong device at pinoprotektahan ng device encryption (Face ID, passcode, etc.).</div>
-        </div>
+    <h2>Troubleshooting</h2>
 
-        <div class="faq-item">
-            <div class="q">Paano mag-refund?</div>
-            <div class="a">Ang refunds ay hinahandle ng Apple. Pumunta sa <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a> o kontakin ang Apple Support.</div>
-        </div>
+    <div class="faq-card">
+        <h3>Hindi nag-download ang AI modelo</h3>
+        <p>Siguraduhin na may stable na internet connection (WiFi recommended dahil 2+ GB ang modelo). I-check din na may sapat na storage space ang iyong device (at least 4 GB free). Kung may VPN, subukang i-disable muna. Restart ang app at subukan ulit.</p>
+    </div>
 
-        <h2>Troubleshooting</h2>
+    <div class="faq-card">
+        <h3>Masyadong mabagal ang analysis</h3>
+        <p>Normal ang 15-60 segundo depende sa device. Ang unang analysis ay mas mabagal dahil nilo-load pa ang modelo. Sa iPhone 13 (4 GB), maaaring tumagal ng 30-60 segundo. Sa iPhone 14+ (6 GB+), karaniwang 15-30 segundo lang. I-close ang ibang apps para ma-free ang memory.</p>
+    </div>
 
-        <h3>Hindi naglo-load ang AI modelo</h3>
-        <ul>
-            <li>Siguraduhing may sapat na storage (at least 2 GB na libre)</li>
-            <li>Siguraduhing may internet connection para sa unang download</li>
-            <li>Subukang i-restart ang app</li>
-            <li>Kung naka-VPN, subukang i-off muna</li>
-        </ul>
+    <div class="faq-card">
+        <h3>Hindi gumagana ang camera scan</h3>
+        <p>Siguraduhin na may camera permission ang UNAWAIN sa Settings > UNAWAIN > Camera. Siguraduhin din na maliwanag ang dokumento at hindi malabo ang litrato. Para sa mas magandang resulta, i-crop ang litrato sa document area lang.</p>
+    </div>
 
-        <h3>Mabagal ang pagsusuri</h3>
-        <ul>
-            <li>Normal ang 15-60 segundo depende sa haba ng dokumento at device</li>
-            <li>Ang unang pagsusuri pagkatapos buksan ang app ay mas matagal (naglo-load ang modelo)</li>
-            <li>Sa 4 GB devices (iPhone 13), mas matagal kaysa sa 8 GB+ devices</li>
-            <li>Subukang isara ang ibang apps para magpalaya ng memory</li>
-        </ul>
-
-        <h3>Hindi malinaw ang OCR / text extraction</h3>
-        <ul>
-            <li>Siguraduhing maliwanag ang lighting kapag nag-scan</li>
-            <li>I-flatten ang dokumento — iwasan ang mga tiklop at kulubot</li>
-            <li>Subukang i-crop ang larawan para sa mas magandang resulta</li>
-            <li>Para sa PDF, mas mataas ang kalidad ng text extraction</li>
-        </ul>
-
+    <div class="faq-card">
         <h3>Nag-crash ang app</h3>
-        <ul>
-            <li>I-restart ang app at subukan muli</li>
-            <li>Siguraduhing updated ang iOS sa pinakabagong bersyon</li>
-            <li>Kung paulit-ulit, mag-email sa amin na may detalye ng device at kung ano ang ginagawa mo nang ma-crash</li>
-        </ul>
-
-        <div class="highlight">
-            <strong>Tip:</strong> Kapag nag-email, isama ang iyong device model (hal. iPhone 15 Pro), iOS version, at UNAWAIN version (makikita sa Settings > Bersyon). Mas mabilis kaming makakatulong!
-        </div>
-
-        <h2>About UNAWAIN</h2>
-        <p><strong>UNAWAIN</strong> — mula sa salitang Filipinong "unawa" na nangangahulugang pag-intindi o pagkaunawa.</p>
-        <p>Ang UNAWAIN ay tumutulong sa mga Pilipino na maunawaan ang anumang dokumento o audio, gamit ang kapangyarihan ng on-device AI. Ang disenyo ay inspirado ng Solihiya — ang tradisyonal na Filipino weaving pattern.</p>
-        <p>Ginawa nang may pagmamahal sa Pilipinas.</p>
+        <p>Restart ang app at subukan ulit. I-update ang iOS sa pinakabagong version. Kung paulit-ulit, mag-email sa amin kasama ang iyong device model (hal. iPhone 15 Pro), iOS version, at UNAWAIN version.</p>
     </div>
 
-    <footer>
-        <p><a href="../">UNAWAIN</a> &middot; <a href="../privacy/">Privacy Policy</a> &middot; <a href="../terms/">Terms of Use</a></p>
-        <p style="margin-top: 8px;">&copy; 2025 Ralph Mattew Palomaria</p>
-    </footer>
+    <h2>Tungkol sa UNAWAIN</h2>
+
+    <p>"UNAWAIN" ay mula sa Filipino na salitang "unawa" — pag-intindi, pag-unawa. Ang app na ito ay ginawa para tulungan ang mga Pilipino na maunawaan ang kanilang mga dokumento gamit ang on-device AI.</p>
+
+    <p>Ang disenyo ng UNAWAIN ay inspirado ng <strong>Solihiya</strong> — isang tradisyunal na Filipino weaving pattern na sumasagisag sa pagkakaugnay at pagkakaisa.</p>
+
+    <p style="margin-top: 24px; color: var(--philippine-teal); font-weight: 600;">Ginawa nang may pagmamahal sa Pilipinas.</p>
+
+    <a href="../" class="legal-back">&larr; Back to UNAWAIN</a>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <div class="footer-bottom">
+            <span>&copy; 2025&ndash;2026 Ralph Mattew Palomaria</span>
+            <span class="footer-love">Ginawa nang may pagmamahal sa Pilipinas &#127477;&#127469;</span>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
