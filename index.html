@@ -5,30 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UNAWAIN — Filipino Document Intelligence | On-Device AI</title>
     <meta name="description" content="On-device AI na tumutulong sa mga Pilipino na maunawaan ang anumang dokumento — sa sarili mong wika, sa sarili mong device. 100% pribado, walang internet.">
+    <meta name="keywords" content="UNAWAIN, Filipino, document analysis, AI, on-device, privacy, Cebuano, Ilocano, Pangasinan, Waray, OCR, summarizer, Philippines">
+    <meta name="author" content="Ralph Mattew Palomaria">
+    <link rel="canonical" href="https://unawain.makata.ai/">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="UNAWAIN — Filipino Document Intelligence">
     <meta property="og:description" content="On-device AI para sa mga Pilipino. I-scan o i-upload ang dokumento, makakuha ng buod sa 6 na wika. 100% pribado.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://ralph-mattew.github.io/unawain-app/assets/img/appicon.png">
-    <meta property="og:url" content="https://ralph-mattew.github.io/unawain-app/">
+    <meta property="og:image" content="https://unawain.makata.ai/assets/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://unawain.makata.ai/">
+    <meta property="og:site_name" content="UNAWAIN">
+    <meta property="og:locale" content="fil_PH">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="UNAWAIN — Filipino Document Intelligence">
     <meta name="twitter:description" content="On-device AI para sa mga Pilipino. I-scan, suriin, unawain — sa sarili mong wika.">
+    <meta name="twitter:image" content="https://unawain.makata.ai/assets/img/og-image.jpg">
+
+    <!-- Theme & Icons -->
     <meta name="theme-color" content="#00695C">
-    <link rel="icon" type="image/png" href="assets/img/appicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Smart App Banner (update app-id once live on App Store) -->
+    <!-- <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID"> -->
+
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="assets/screenshots/dashboard-dark.png">
+
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "UNAWAIN",
-        "operatingSystem": "iOS 26+",
+        "operatingSystem": "iOS 18.0+",
         "applicationCategory": "ProductivityApplication",
+        "url": "https://unawain.makata.ai",
         "offers": [
             { "@type": "Offer", "price": "0", "priceCurrency": "PHP", "description": "Free Tier — 5 document analyses" },
             { "@type": "Offer", "price": "199", "priceCurrency": "PHP", "description": "Lifetime Access — Unlimited" }
         ],
         "description": "On-device AI na tumutulong sa mga Pilipino na maunawaan ang anumang dokumento sa sarili mong wika.",
-        "author": { "@type": "Person", "name": "Ralph Mattew Palomaria" }
+        "author": { "@type": "Person", "name": "Ralph Mattew Palomaria" },
+        "screenshot": "https://unawain.makata.ai/assets/mockups/hero-dashboard.jpg",
+        "featureList": "Document OCR, AI Summarization, Audio Transcription, 6 Philippine Languages, 4 Output Formats, Document Intelligence, Entity Protection, 100% On-Device Privacy, Offline Analysis"
     }
     </script>
 </head>
@@ -39,7 +67,7 @@
 <!-- Navigation -->
 <nav class="site-nav" id="site-nav">
     <div class="nav-inner">
-        <a href="./" class="nav-brand"><img src="assets/img/appicon.png" alt="UNAWAIN" class="nav-icon" width="32" height="32">UNAWAIN</a>
+        <a href="./" class="nav-brand"><img src="assets/img/appicon-web.png" alt="UNAWAIN" class="nav-icon" width="32" height="32">UNAWAIN</a>
         <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
         <ul class="nav-links">
             <li><a href="#features">Features</a></li>
@@ -58,19 +86,20 @@
     <div class="hero-orb hero-orb-2"></div>
     <div class="section-inner">
         <div class="hero-content">
-            <h1 class="hero-tagline">
+            <h1 class="hero-tagline" id="hero-tagline">
+                <span class="baybayin-overlay" id="baybayin-overlay" aria-hidden="true">ᜂᜈᜏᜁᜈ᜔ · ᜐᜓᜎᜁᜈ᜔</span>
                 <span class="accent">Unawain.</span> Suriin.<br>Protektahan.
             </h1>
             <p class="hero-subtitle">
-                On-device AI na tumutulong sa mga Pilipino na maunawaan ang anumang dokumento — sa sarili mong wika, sa sarili mong device.
+                I-scan ang dokumento, i-record ang meeting, o i-upload ang PDF — at makakuha ng matalinong buod sa sarili mong wika. Lahat on-device. Walang internet. Walang data collection.
             </p>
             <div class="hero-badges">
                 <a href="#pricing" class="hero-cta">
                     <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                    I-download sa App Store
+                    Malapit na — Tingnan ang Presyo
                 </a>
                 <span class="privacy-pill">
-                    <span class="lock-icon">&#x1F512;</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
                     100% On-Device &middot; Zero Data Collection
                 </span>
             </div>
@@ -80,12 +109,28 @@
             <div class="phone-mockup">
                 <div class="phone-notch"></div>
                 <div class="phone-screen">
-                    <img src="assets/screenshots/dashboard-dark.png" alt="UNAWAIN Dashboard — istatistika, keyword chips, at mabilis na aksyon sa dark mode" class="phone-screenshot">
+                    <img src="assets/screenshots/dashboard-dark.png" alt="UNAWAIN Dashboard — AI-powered na pagsusuri ng dokumento sa dark mode" class="phone-screenshot">
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Trust Strip -->
+<div class="trust-strip">
+    <div class="trust-inner">
+        <span class="trust-label">Pinapagana ng</span>
+        <div class="trust-logos">
+            <span class="trust-logo"><strong>Google</strong> Gemma</span>
+            <span class="trust-divider"></span>
+            <span class="trust-logo"><strong>Meta</strong> NLLB-200</span>
+            <span class="trust-divider"></span>
+            <span class="trust-logo"><strong>Alibaba</strong> Qwen</span>
+            <span class="trust-divider"></span>
+            <span class="trust-logo"><strong>Apple</strong> WhisperKit</span>
+        </div>
+    </div>
+</div>
 
 <div class="banig-divider"></div>
 
@@ -96,50 +141,50 @@
             <span class="section-label">Ang Problema</span>
             <h2 class="section-title">Mahirap ba intindihin ang mga dokumento?</h2>
             <p>
-                Kontrata, billing statement, government memo, legal notice — maraming dokumento ang nakasulat sa komplikadong wika. Hindi lahat ng Pilipino ay abogado, accountant, o engineer. Pero lahat ng Pilipino ay may karapatang maunawaan kung ano ang nasa harap nila.
+                Kontrata na puno ng legal terms. Billing statement na hindi mo alam kung tama. Government memo na nakasulat sa English. Meeting na nakalimutan mo ang mga napag-usapan. Hindi lahat ng Pilipino ay abogado, accountant, o engineer — pero lahat ng Pilipino ay may karapatang maunawaan kung ano ang nasa harap nila.
             </p>
-            <p style="margin-top: 12px;">
-                <strong style="color: var(--philippine-teal); font-size: 1.1rem;">Diyan papasok ang UNAWAIN.</strong>
+            <p class="problem-highlight">
+                <strong>Diyan papasok ang UNAWAIN.</strong>
             </p>
         </div>
     </div>
 </section>
-
-<div class="banig-divider"></div>
 
 <!-- How It Works -->
 <section class="how-it-works" id="how-it-works">
     <div class="section-inner section-center">
         <span class="section-label reveal">Paano Gamitin</span>
-        <h2 class="section-title reveal">Tatlong hakbang lang</h2>
-        <p class="section-subtitle reveal">Mula sa papel hanggang sa malinaw na buod — sa loob ng ilang segundo.</p>
+        <h2 class="section-title reveal">Apat na hakbang lang</h2>
+        <p class="section-subtitle reveal">Mula sa papel o boses hanggang sa malinaw na buod — sa loob ng ilang segundo.</p>
 
-        <div class="steps-grid">
+        <div class="steps-grid steps-grid-4">
             <div class="step reveal reveal-delay-1">
                 <div class="step-number">1</div>
                 <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
-                <h3>I-scan o I-upload</h3>
-                <p>Kumuha ng litrato ng dokumento, mag-import ng PDF, o mag-upload ng larawan mula sa gallery.</p>
-                <span class="step-arrow">&#10140;</span>
+                <h3>I-scan, I-upload, o I-record</h3>
+                <p>Kumuha ng litrato, mag-import ng PDF, mag-upload ng larawan, o i-record ang meeting o lecture.</p>
             </div>
             <div class="step reveal reveal-delay-2">
                 <div class="step-number">2</div>
                 <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2l1 3 3 1-3 1-1 3-1-3-3-1 3-1z"/><path d="M19 8l.7 2.1 2.1.7-2.1.7-.7 2.1-.7-2.1L16.2 11l2.1-.7z"/><path d="M2 18l6-6 4 4-6 6z"/></svg></div>
                 <h3>Suriin ng AI</h3>
-                <p>On-device AI ang mag-analyze — kinikilala ang uri, nagha-highlight ng mahahalaga, at nagbubuod.</p>
-                <span class="step-arrow">&#10140;</span>
+                <p>Awtomatikong kinikilala ang uri ng dokumento, ine-extract ang mahahalagang datos, at nagbubuod — lahat sa iyong device.</p>
             </div>
             <div class="step reveal reveal-delay-3">
                 <div class="step-number">3</div>
+                <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></div>
+                <h3>Piliin ang Format</h3>
+                <p>Buod, Mga Tala, Mga Gawain, o Datos — piliin kung paano mo gustong makita ang resulta.</p>
+            </div>
+            <div class="step reveal reveal-delay-4">
+                <div class="step-number">4</div>
                 <div class="step-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg></div>
                 <h3>Basahin sa Sariling Wika</h3>
-                <p>Piliin ang iyong dialect — Filipino, Cebuano, Ilocano, Pangasinan, Waray, o English.</p>
+                <p>Isalin sa Filipino, Cebuano, Ilocano, Pangasinan, Waray, o English — nananatili ang mga pangalan, halaga, at petsa.</p>
             </div>
         </div>
     </div>
 </section>
-
-<div class="banig-divider"></div>
 
 <!-- Features -->
 <section class="features" id="features">
@@ -148,36 +193,65 @@
         <h2 class="section-title reveal">Lahat ng kailangan mo, nasa isang app</h2>
         <p class="section-subtitle reveal">Matalinong pagsusuri ng dokumento na dinisenyo para sa mga Pilipino.</p>
 
-        <div class="features-grid">
-            <div class="feature-card capiz-shimmer reveal reveal-delay-1">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg></div>
-                <h3>6 na Wika</h3>
-                <p>Filipino, Cebuano, Ilocano, Pangasinan, Waray, at English. Hindi lang translation — naiintindihan ang konteksto.</p>
+        <div class="bento-grid">
+            <div class="bento-card bento-wide capiz-shimmer reveal reveal-delay-1">
+                <div class="bento-card-content">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg></div>
+                    <h3>6 na Wika at Dialect</h3>
+                    <p>Hindi lang translation — naiintindihan ang konteksto. Nananatili ang mga pangalan, halaga, at petsa kahit isinalin.</p>
+                </div>
+                <div class="bento-visual">
+                    <div class="bento-chips">
+                        <span class="bento-chip">Filipino</span>
+                        <span class="bento-chip">Cebuano</span>
+                        <span class="bento-chip">Ilocano</span>
+                        <span class="bento-chip">Pangasinan</span>
+                        <span class="bento-chip">Waray</span>
+                        <span class="bento-chip bento-chip-accent">English</span>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card capiz-shimmer reveal reveal-delay-2">
+            <div class="bento-card capiz-shimmer reveal reveal-delay-2">
                 <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-                <h3>100% Pribado</h3>
-                <p>Walang internet, walang server, walang data collection. Ang data mo ay nananatili sa iyong device — walang nakakakita kundi ikaw.</p>
+                <h3>100% Pribado at On-Device</h3>
+                <p>Walang server, walang cloud, walang analytics, walang ads. Lahat ng processing ay sa loob ng iyong device.</p>
             </div>
-            <div class="feature-card capiz-shimmer reveal reveal-delay-3">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M17 2l.5 1.5L19 4l-1.5.5L17 6l-.5-1.5L15 4l1.5-.5z"/></svg></div>
-                <h3>Matalinong Pagsusuri</h3>
-                <p>Kinikilala ang uri ng dokumento, pangalan, petsa, halaga, at sensitibong impormasyon. Awtomatiko — walang manual setup.</p>
+            <div class="bento-card capiz-shimmer reveal reveal-delay-3">
+                <div class="feature-icon feature-icon-gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M17 2l.5 1.5L19 4l-1.5.5L17 6l-.5-1.5L15 4l1.5-.5z"/></svg></div>
+                <h3>Document Intelligence</h3>
+                <p>Awtomatikong kinikilala ang uri ng dokumento, ine-extract ang pangalan, petsa, halaga, at sensitibong datos.</p>
             </div>
-            <div class="feature-card capiz-shimmer reveal reveal-delay-1">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></div>
-                <h3>Scan, Import, Upload</h3>
-                <p>Kumuha ng litrato, mag-import ng PDF, o pumili ng larawan mula sa gallery. Maraming paraan para ma-analyze ang dokumento.</p>
+            <div class="bento-card bento-wide capiz-shimmer reveal reveal-delay-1">
+                <div class="bento-card-content">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></div>
+                    <h3>Piliin ang Tamang Format</h3>
+                    <p>Buod para sa mabilisang pag-unawa. Mga Tala para sa organized notes. Mga Gawain para sa action checklist. Datos para sa talahanayan ng halaga at petsa.</p>
+                </div>
+                <div class="bento-visual">
+                    <div class="bento-chips bento-chips-formats">
+                        <span class="bento-chip bento-chip-active">Buod</span>
+                        <span class="bento-chip">Mga Tala</span>
+                        <span class="bento-chip">Mga Gawain</span>
+                        <span class="bento-chip">Datos</span>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card capiz-shimmer reveal reveal-delay-2">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/><rect x="2" y="2" width="20" height="20" rx="2" stroke-opacity="0.3"/></svg></div>
-                <h3>History at Insights</h3>
-                <p>Lahat ng resulta ay naka-save. Makikita ang mga keyword, entity, at trend sa iyong mga dokumento — lahat lokal sa device.</p>
+            <div class="bento-card bento-wide capiz-shimmer reveal reveal-delay-3">
+                <div class="bento-card-content">
+                    <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg></div>
+                    <h3>Audio Recording at Transcription</h3>
+                    <p>I-record ang meeting, lecture, o interview. Awtomatikong tina-transcribe at sinusuri ng AI — makakuha ng buod, notes, o action items mula sa boses.</p>
+                </div>
+                <div class="bento-visual">
+                    <div class="bento-waveform">
+                        <span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span><span class="wave-bar"></span>
+                    </div>
+                </div>
             </div>
-            <div class="feature-card capiz-shimmer reveal reveal-delay-3">
-                <div class="feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-                <h3>Mabilis at Offline</h3>
-                <p>15-60 segundo lang ang analysis. Pagkatapos i-download ang modelo, hindi na kailangan ng internet kailanman.</p>
+            <div class="bento-card capiz-shimmer reveal reveal-delay-1">
+                <div class="feature-icon feature-icon-gold"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                <h3>Mabilis, Offline, at Adaptive</h3>
+                <p>Awtomatikong pinipili ang pinakamahusay na AI model para sa iyong device. Offline pagkatapos ng model download.</p>
             </div>
         </div>
     </div>
@@ -194,17 +268,62 @@
                 <div class="stat-label">Mga Wika at Dialect</div>
             </div>
             <div class="stat-item reveal reveal-delay-2">
+                <div class="stat-number" data-target="4" data-suffix="">0</div>
+                <div class="stat-label">Format ng Output</div>
+            </div>
+            <div class="stat-item reveal reveal-delay-3">
                 <div class="stat-number" data-target="100" data-suffix="%">0%</div>
                 <div class="stat-label">On-Device Privacy</div>
             </div>
-            <div class="stat-item reveal reveal-delay-3">
-                <div class="stat-number" data-target="15" data-suffix="s">0s</div>
-                <div class="stat-label">Pinakamabilis na Analysis</div>
-            </div>
             <div class="stat-item reveal reveal-delay-4">
-                <div class="stat-number" data-target="199" data-prefix="&#8369;" data-suffix="">&#8369;0</div>
-                <div class="stat-label">Lifetime Access</div>
+                <div class="stat-number" data-target="0" data-suffix="">0</div>
+                <div class="stat-label">Data na Ipinapadala</div>
             </div>
+        </div>
+    </div>
+</section>
+
+<div class="banig-divider"></div>
+
+<!-- Live Translation Demo -->
+<section class="demo-section" id="demo">
+    <div class="section-inner section-center">
+        <span class="section-label reveal">Tingnan Kung Paano</span>
+        <h2 class="section-title reveal">Entity-protected na pagsasalin</h2>
+        <p class="section-subtitle reveal">Ang mga pangalan, halaga, at petsa ay hindi binabago — kahit anong wika ang piliin mo.</p>
+
+        <div class="demo-container reveal">
+            <div class="demo-card demo-source">
+                <div class="demo-card-label"><span class="demo-dot"></span> Orihinal na Dokumento</div>
+                <div class="demo-text">
+                    MERALCO ELECTRIC COMPANY<br>
+                    Account: Maria Clara Santos<br>
+                    Period: March 1–31, 2025<br>
+                    Amount Due: ₱4,832.50<br>
+                    Due Date: April 15, 2025<br>
+                    Previous Balance: ₱0.00
+                </div>
+            </div>
+            <div class="demo-card demo-result">
+                <div class="demo-card-label"><span class="demo-dot"></span> AI Buod — <span id="demo-lang-label">Filipino</span></div>
+                <div class="demo-text demo-result-text" id="demo-result-text">
+                    Ito ay billing statement mula sa <span class="entity entity-name">MERALCO</span> para kay <span class="entity entity-name">Maria Clara Santos</span>. Ang singil para sa <span class="entity entity-date">March 1–31, 2025</span> ay <span class="entity entity-amount">₱4,832.50</span>. Kailangang bayaran bago ang <span class="entity entity-date">April 15, 2025</span>. Walang natitirang balanse.
+                </div>
+                <div class="demo-entity-legend">
+                    <span class="demo-legend-item"><span class="demo-legend-swatch" style="background:rgba(0,105,92,0.3)"></span> Pangalan</span>
+                    <span class="demo-legend-item"><span class="demo-legend-swatch" style="background:rgba(196,154,108,0.4)"></span> Halaga</span>
+                    <span class="demo-legend-item"><span class="demo-legend-swatch" style="background:rgba(93,64,55,0.3)"></span> Petsa</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-dialects reveal reveal-delay-1">
+            <button class="demo-dialect active" data-lang="fil">Filipino</button>
+            <button class="demo-dialect" data-lang="ceb">Cebuano</button>
+            <button class="demo-dialect" data-lang="ilo">Ilocano</button>
+            <button class="demo-dialect" data-lang="pag">Pangasinan</button>
+            <button class="demo-dialect" data-lang="war">Waray</button>
+            <button class="demo-dialect" data-lang="eng">English</button>
         </div>
     </div>
 </section>
@@ -221,52 +340,40 @@
         <div class="carousel-container">
             <div class="carousel-track" id="carousel-track">
                 <div class="carousel-slide" data-index="0">
-                    <div class="screenshot-frame">
-                        <div class="screenshot-inner">
-                            <img src="assets/screenshots/dashboard-light.png" alt="UNAWAIN Dashboard" loading="lazy">
-                        </div>
+                    <div class="mockup-frame">
+                        <img src="assets/mockups/hero-dashboard.jpg" alt="UNAWAIN — Unawain ang kahit anong dokumento" loading="lazy">
                     </div>
-                    <div class="screenshot-caption">Dashboard</div>
+                    <div class="screenshot-caption">Unawain Ang Kahit Anong Dokumento</div>
                 </div>
                 <div class="carousel-slide" data-index="1">
-                    <div class="screenshot-frame">
-                        <div class="screenshot-inner">
-                            <img src="assets/screenshots/onboarding-scan.png" alt="UNAWAIN Onboarding" loading="lazy">
-                        </div>
+                    <div class="mockup-frame">
+                        <img src="assets/mockups/scan-upload.jpg" alt="UNAWAIN — I-Scan o I-Upload. Mabilis. Accurate." loading="lazy">
                     </div>
-                    <div class="screenshot-caption">Onboarding</div>
+                    <div class="screenshot-caption">I-Scan o I-Upload</div>
                 </div>
                 <div class="carousel-slide" data-index="2">
-                    <div class="screenshot-frame">
-                        <div class="screenshot-inner">
-                            <img src="assets/screenshots/ai-processing.png" alt="UNAWAIN AI Processing" loading="lazy">
-                        </div>
+                    <div class="mockup-frame">
+                        <img src="assets/mockups/onboarding.jpg" alt="UNAWAIN — Hinahabi ang Karunungan" loading="lazy">
                     </div>
-                    <div class="screenshot-caption">AI Analysis</div>
+                    <div class="screenshot-caption">Hinahabi ang Karunungan</div>
                 </div>
                 <div class="carousel-slide" data-index="3">
-                    <div class="screenshot-frame">
-                        <div class="screenshot-inner">
-                            <img src="assets/screenshots/document-result.png" alt="UNAWAIN Document Result" loading="lazy">
-                        </div>
+                    <div class="mockup-frame">
+                        <img src="assets/mockups/dialect-selection.jpg" alt="UNAWAIN — Suriin sa Sarili Mong Wika" loading="lazy">
                     </div>
-                    <div class="screenshot-caption">Summary Result</div>
+                    <div class="screenshot-caption">Suriin sa Sarili Mong Wika</div>
                 </div>
                 <div class="carousel-slide" data-index="4">
-                    <div class="screenshot-frame">
-                        <div class="screenshot-inner">
-                            <img src="assets/screenshots/dialect-selection.png" alt="UNAWAIN Dialect Selection" loading="lazy">
-                        </div>
+                    <div class="mockup-frame">
+                        <img src="assets/mockups/privacy-history.jpg" alt="UNAWAIN — Walang Data Leakage" loading="lazy">
                     </div>
-                    <div class="screenshot-caption">Dialect Selection</div>
+                    <div class="screenshot-caption">Walang Data Leakage</div>
                 </div>
                 <div class="carousel-slide" data-index="5">
-                    <div class="screenshot-frame">
-                        <div class="screenshot-inner">
-                            <img src="assets/screenshots/dashboard-dark.png" alt="UNAWAIN Dark Mode" loading="lazy">
-                        </div>
+                    <div class="mockup-frame">
+                        <img src="assets/mockups/ipad.jpg" alt="UNAWAIN sa iPad — Malaki at Malinaw" loading="lazy">
                     </div>
-                    <div class="screenshot-caption">Dark Mode</div>
+                    <div class="screenshot-caption">UNAWAIN sa iPad</div>
                 </div>
             </div>
             <div class="carousel-nav">
@@ -277,8 +384,6 @@
         </div>
     </div>
 </section>
-
-<div class="banig-divider"></div>
 
 <!-- Audience -->
 <section class="audience" id="audience">
@@ -300,42 +405,40 @@
                 <div class="audience-panel-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
                 <div>
                     <h3>Karaniwang Pilipino</h3>
-                    <p>Billing statement, kontrata, government notice — lahat ng ito ay naiintindihan na gamit ang UNAWAIN. I-scan lang ang dokumento at makakakuha ka ng malinaw na buod sa Filipino o sa iyong sariling dialect. Hindi na kailangan magpakonsulta o mag-Google ng bawat termino.</p>
+                    <p>Billing statement, kontrata, government notice — i-scan lang at makakuha ng buod, tala, o checklist sa Filipino o sa iyong sariling dialect. Awtomatikong kinikilala ang mga pangalan, halaga, at petsa. Hindi na kailangan magpakonsulta o mag-Google ng bawat termino.</p>
                 </div>
             </div>
             <div class="audience-panel">
                 <div class="audience-panel-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg></div>
                 <div>
                     <h3>Estudyante</h3>
-                    <p>I-scan ang module o i-upload ang PDF na readings. Makakakuha ka ng organized notes, key points, at task list — sa wikang mas madaling maintindihan. Libre ang 5 analyses para masubukan muna bago bumili.</p>
+                    <p>I-scan ang module, i-upload ang PDF, o i-record ang lecture. Piliin kung gusto mo ng buod, organized notes, o checklist ng mga gawain — sa wikang mas madaling maintindihan. Libre ang 5 analyses para masubukan muna bago bumili.</p>
                 </div>
             </div>
             <div class="audience-panel">
                 <div class="audience-panel-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v3"/><path d="M2 12h20"/></svg></div>
                 <div>
                     <h3>Propesyonal</h3>
-                    <p>Mabilis na document summaries, action item checklists, at data extraction — lahat pribado at hindi dumadaan sa cloud. I-record ang meeting at makakuha ng AI-powered transcription at summary.</p>
+                    <p>I-record ang meeting para sa AI-powered transcription at action items. Mag-scan ng kontrata para sa data extraction at entity detection. Piliin ang Datos format para sa talahanayan ng mga halaga at petsa — lahat pribado, hindi dumadaan sa cloud.</p>
                 </div>
             </div>
             <div class="audience-panel">
                 <div class="audience-panel-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
                 <div>
                     <h3>Senior Citizens</h3>
-                    <p>Malaking font, simpleng interface, at Filipino na wika. Tulungan ang ating mga nakatatanda na maunawaan ang kanilang billing statements, government letters, at medical documents nang hindi nangangailangan ng tulong sa iba.</p>
+                    <p>Malaking font, simpleng interface, at Filipino na wika. I-scan ang billing statement o government letter at makakuha ng malinaw na buod. Nananatili ang mga mahahalagang numero, halaga, at petsa kahit isinalin sa sariling wika.</p>
                 </div>
             </div>
             <div class="audience-panel">
                 <div class="audience-panel-icon"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C20.3 6.7 21 5.1 21 4.5c0-.6-.1-.8-.5-.8-.6 0-2.2.7-3 1.5L14 8.7 5.8 6.2c-.5-.2-1.1 0-1.3.5l-.3.5c-.2.4 0 .9.3 1.1L11 12l-2 3H6l-1 1 3 2 2 3 1-1v-3l3-2 3.8 6.5c.2.4.7.5 1.1.3l.5-.3c.5-.2.7-.8.4-1.3z"/></svg></div>
                 <div>
                     <h3>OFW — Overseas Filipino Workers</h3>
-                    <p>Nasa ibang bansa pero may kontrata o dokumento na kailangang intindihin? I-scan bago pumirma. I-review ang mga papeles sa sarili mong wika — kahit walang internet pagkatapos ng initial setup.</p>
+                    <p>Nasa ibang bansa pero may kontrata o dokumento na kailangang intindihin? I-scan bago pumirma at makakuha ng buod o checklist ng mga obligasyon. Nananatili ang mga pangalan, halaga, at petsa kahit isinalin — at gumagana offline pagkatapos ng initial setup.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<div class="banig-divider"></div>
 
 <!-- Privacy -->
 <section class="privacy-section" id="privacy-section">
@@ -344,7 +447,7 @@
             <div class="reveal reveal-left">
                 <span class="section-label">Privacy</span>
                 <h2 class="section-title">Ang data mo, sa iyo lang</h2>
-                <p class="section-subtitle" style="margin-bottom: 28px;">Hindi katulad ng ibang apps, ang UNAWAIN ay hindi nagpapadala ng kahit ano sa internet. Walang server. Walang cloud. Walang data collection.</p>
+                <p class="section-subtitle privacy-intro">Hindi katulad ng ibang apps, ang UNAWAIN ay hindi nagpapadala ng kahit ano sa internet. Walang server. Walang cloud. Walang data collection.</p>
                 <ul class="privacy-points">
                     <li><span class="check">&#10003;</span> Walang user accounts o registration</li>
                     <li><span class="check">&#10003;</span> Walang analytics o tracking</li>
@@ -353,19 +456,19 @@
                     <li><span class="check">&#10003;</span> Isang beses lang mag-download ng modelo, tapos offline na</li>
                     <li><span class="check">&#10003;</span> I-delete ang app = tanggal na lahat ng data</li>
                 </ul>
-                <a href="privacy/" style="font-weight: 600; font-size: 0.9rem;">Basahin ang buong Privacy Policy &rarr;</a>
+                <a href="privacy/" class="privacy-link">Basahin ang buong Privacy Policy &rarr;</a>
             </div>
             <div class="privacy-comparison reveal reveal-right">
                 <div class="comparison-row comparison-bad">
-                    <span class="comparison-icon">&#9729;&#65039;</span>
+                    <span class="comparison-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg></span>
                     <span>Karaniwang apps: i-upload sa cloud server</span>
                 </div>
                 <div class="comparison-row comparison-bad">
-                    <span class="comparison-icon">&#128065;</span>
+                    <span class="comparison-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
                     <span>Karaniwang apps: third-party nakakabasa ng data</span>
                 </div>
                 <div class="comparison-row comparison-bad">
-                    <span class="comparison-icon">&#128225;</span>
+                    <span class="comparison-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></span>
                     <span>Karaniwang apps: analytics at tracking</span>
                 </div>
                 <div class="privacy-shield-divider">
@@ -377,15 +480,15 @@
                     </div>
                 </div>
                 <div class="comparison-row comparison-good">
-                    <span class="comparison-icon">&#128274;</span>
+                    <span class="comparison-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
                     <span>UNAWAIN: lahat ng processing sa iyong device lang</span>
                 </div>
                 <div class="comparison-row comparison-good">
-                    <span class="comparison-icon">&#128241;</span>
+                    <span class="comparison-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
                     <span>UNAWAIN: walang internet, walang server, walang cloud</span>
                 </div>
                 <div class="comparison-row comparison-good">
-                    <span class="comparison-icon">&#128272;</span>
+                    <span class="comparison-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
                     <span>UNAWAIN: protected ng device encryption mo</span>
                 </div>
             </div>
@@ -410,38 +513,39 @@
                 <ul class="price-features">
                     <li><span class="check">&#10003;</span> 5 document analyses</li>
                     <li><span class="check">&#10003;</span> Lahat ng 6 na wika</li>
+                    <li><span class="check">&#10003;</span> 4 na output format</li>
+                    <li><span class="check">&#10003;</span> Audio recording at transcription</li>
                     <li><span class="check">&#10003;</span> Document intelligence</li>
-                    <li><span class="check">&#10003;</span> History at insights</li>
                     <li><span class="check">&#10003;</span> 100% on-device privacy</li>
                 </ul>
             </div>
             <div class="price-card featured reveal reveal-delay-2">
-                <div class="price-badge">BEST VALUE</div>
+                <div class="price-badge">PINAKASULIT</div>
                 <h3>Habambuhay</h3>
                 <div class="price">&#8369;199</div>
                 <div class="price-note">Isang beses lang &middot; Walang subscription</div>
                 <ul class="price-features">
                     <li><span class="check">&#10003;</span> Unlimited na analyses</li>
                     <li><span class="check">&#10003;</span> Lahat ng 6 na wika</li>
-                    <li><span class="check">&#10003;</span> Document intelligence</li>
-                    <li><span class="check">&#10003;</span> History at insights</li>
+                    <li><span class="check">&#10003;</span> 4 na output format</li>
+                    <li><span class="check">&#10003;</span> Audio recording at transcription</li>
+                    <li><span class="check">&#10003;</span> Document intelligence at entity protection</li>
+                    <li><span class="check">&#10003;</span> History, comparison, at export</li>
                     <li><span class="check">&#10003;</span> Lifetime updates</li>
                     <li><span class="check">&#10003;</span> Suportahan ang developer</li>
                 </ul>
-                <a href="#pricing" class="price-cta">I-download sa App Store</a>
+                <a href="#pricing" class="price-cta" id="appstore-link">Malapit nang dumating sa App Store</a>
             </div>
         </div>
     </div>
 </section>
-
-<div class="banig-divider"></div>
 
 <!-- Tech -->
 <section class="tech" id="tech">
     <div class="section-inner section-center">
         <span class="section-label reveal">Teknolohiya</span>
         <h2 class="section-title reveal">Powered by open-source AI</h2>
-        <p class="section-subtitle reveal">Mga modelo mula sa Google, Meta, at Apple — tumatakbo nang lokal sa iyong device gamit ang Metal GPU.</p>
+        <p class="section-subtitle reveal">Mga modelo mula sa Google, Meta, Alibaba, at Apple — tumatakbo nang lokal sa iyong device gamit ang Metal GPU.</p>
 
         <div class="tech-grid">
             <div class="tech-badge reveal reveal-delay-1">
@@ -449,28 +553,47 @@
                 Gemma 4 Edge (Google)
             </div>
             <div class="tech-badge reveal reveal-delay-2">
+                <span class="tech-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M2 9h2"/><path d="M2 15h2"/><path d="M20 9h2"/><path d="M20 15h2"/></svg></span>
+                Qwen 2.5 (Alibaba)
+            </div>
+            <div class="tech-badge reveal reveal-delay-3">
                 <span class="tech-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg></span>
                 NLLB-200 (Meta)
             </div>
-            <div class="tech-badge reveal reveal-delay-3">
+            <div class="tech-badge reveal reveal-delay-4">
+                <span class="tech-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg></span>
+                WhisperKit (Apple)
+            </div>
+            <div class="tech-badge reveal reveal-delay-5">
                 <span class="tech-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
                 Apple Vision (OCR)
             </div>
-            <div class="tech-badge reveal reveal-delay-4">
+            <div class="tech-badge reveal reveal-delay-5">
                 <span class="tech-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span>
                 Metal GPU Inference
             </div>
-            <div class="tech-badge reveal reveal-delay-5">
-                <span class="tech-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg></span>
-                Apache 2.0 Licensed
-            </div>
         </div>
 
-        <p class="reveal" style="margin-top: 32px; font-size: 0.88rem; color: var(--text-muted);">
-            Minimum: iPhone 13 (4 GB RAM) &middot; iOS 26.0+ &middot; Mga modelo: 1.1&ndash;5.4 GB (one-time download)
+        <p class="reveal tech-note">
+            Minimum: iPhone 13 (4 GB RAM) &middot; iOS 18.0+ &middot; Mga modelo: 1.1&ndash;5.4 GB (one-time download)
         </p>
     </div>
 </section>
+
+<!-- Maker -->
+<section class="maker" id="maker">
+    <div class="section-inner section-center">
+        <div class="maker-content reveal">
+            <div class="maker-badge">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--ginto-bright)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h2 class="section-title">Gawa ng Pilipino, para sa Pilipino</h2>
+            <p class="section-subtitle">Ang UNAWAIN ay produkto ng Makata AI — isang solo Filipino developer na naniniwala na ang pag-unawa sa dokumento ay hindi dapat nakabatay sa wika, lokasyon, o koneksyon sa internet. Bawat linya ng code ay isinulat na may layunin: tulungan ang kapwa Pilipino.</p>
+        </div>
+    </div>
+</section>
+
+<div class="banig-divider"></div>
 
 <!-- Final CTA -->
 <section class="final-cta">
@@ -480,7 +603,7 @@
         <div class="reveal reveal-delay-2">
             <a href="#pricing" class="final-cta-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                I-download sa App Store
+                Malapit nang dumating sa App Store
             </a>
             <p class="final-cta-note">Libre &middot; Walang account &middot; Walang ads</p>
         </div>
@@ -494,7 +617,7 @@
     <div class="footer-inner">
         <div class="footer-grid">
             <div>
-                <div class="footer-brand"><img src="assets/img/appicon.png" alt="UNAWAIN" class="footer-icon" width="40" height="40">UNAWAIN</div>
+                <div class="footer-brand"><img src="assets/img/appicon-web.png" alt="UNAWAIN" class="footer-icon" width="40" height="40">UNAWAIN</div>
                 <p class="footer-tagline">On-device AI na tumutulong sa mga Pilipino na maunawaan ang anumang dokumento — sa sarili mong wika, sa sarili mong device.</p>
             </div>
             <div class="footer-col">
@@ -508,16 +631,38 @@
                 <h4>Support</h4>
                 <ul>
                     <li><a href="support/">FAQ &amp; Suporta</a></li>
-                    <li><a href="mailto:ralphmattew@gmail.com">ralphmattew@gmail.com</a></li>
+                    <li><a href="mailto:feedback@makata.ai">feedback@makata.ai</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2025&ndash;2026 Ralph Mattew Palomaria</span>
+            <span>&copy; 2025&ndash;2026 Makata AI</span>
             <span class="footer-love">Ginawa nang may pagmamahal sa Pilipinas &#127477;&#127469;</span>
         </div>
     </div>
 </footer>
+
+<!-- Sticky Mobile CTA -->
+<div class="sticky-cta" id="sticky-cta">
+    <a href="#pricing" class="sticky-cta-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Malapit na sa App Store
+    </a>
+    <span class="sticky-cta-note">Libre ang unang 5 analyses</span>
+</div>
+
+<!-- Language Toggle -->
+<div class="lang-toggle" id="lang-toggle">
+    <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-option active" data-page-lang="fil">Filipino</button>
+        <button class="lang-option" data-page-lang="ceb">Cebuano</button>
+        <button class="lang-option" data-page-lang="ilo">Ilocano</button>
+        <button class="lang-option" data-page-lang="eng">English</button>
+    </div>
+    <button class="lang-toggle-btn" id="lang-toggle-btn" aria-label="Palitan ang wika">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>
+    </button>
+</div>
 
 <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8593;</button>
 
@@ -823,6 +968,20 @@ document.querySelectorAll('.nav-links a').forEach(function(link) {
     }, { passive: true });
 })();
 
+// Sticky mobile CTA
+(function() {
+    var stickyCta = document.getElementById('sticky-cta');
+    var hero = document.querySelector('.hero');
+    var footer = document.querySelector('.site-footer');
+    if (!stickyCta || !hero) return;
+    window.addEventListener('scroll', function() {
+        var heroBottom = hero.getBoundingClientRect().bottom;
+        var footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+        var show = heroBottom < 0 && footerTop > window.innerHeight;
+        stickyCta.classList.toggle('visible', show);
+    }, { passive: true });
+})();
+
 // Back to top button
 (function() {
     var btn = document.getElementById('back-to-top');
@@ -832,6 +991,142 @@ document.querySelectorAll('.nav-links a').forEach(function(link) {
     }, { passive: true });
     btn.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+
+// Live Translation Demo — dialect switcher
+(function() {
+    var translations = {
+        fil: {
+            label: 'Filipino',
+            text: 'Ito ay billing statement mula sa <span class="entity entity-name">MERALCO</span> para kay <span class="entity entity-name">Maria Clara Santos</span>. Ang singil para sa <span class="entity entity-date">March 1–31, 2025</span> ay <span class="entity entity-amount">₱4,832.50</span>. Kailangang bayaran bago ang <span class="entity entity-date">April 15, 2025</span>. Walang natitirang balanse.'
+        },
+        ceb: {
+            label: 'Cebuano',
+            text: 'Kini usa ka billing statement gikan sa <span class="entity entity-name">MERALCO</span> para kang <span class="entity entity-name">Maria Clara Santos</span>. Ang bayad para sa bulan sa <span class="entity entity-date">March 1–31, 2025</span> kay <span class="entity entity-amount">₱4,832.50</span>. Kinahanglan bayaran sa dili pa ang <span class="entity entity-date">April 15, 2025</span>. Walay nahibilin nga balanse.'
+        },
+        ilo: {
+            label: 'Ilocano',
+            text: 'Daytoy ket billing statement manipud iti <span class="entity entity-name">MERALCO</span> para kenni <span class="entity entity-name">Maria Clara Santos</span>. Ti singil para iti <span class="entity entity-date">March 1–31, 2025</span> ket <span class="entity entity-amount">₱4,832.50</span>. Masapul a bayadan sakbay ti <span class="entity entity-date">April 15, 2025</span>. Awan ti nabati a balanse.'
+        },
+        pag: {
+            label: 'Pangasinan',
+            text: 'Saya et billing statement manlapud <span class="entity entity-name">MERALCO</span> para ed <span class="entity entity-name">Maria Clara Santos</span>. Say bayar para ed <span class="entity entity-date">March 1–31, 2025</span> et <span class="entity entity-amount">₱4,832.50</span>. Kaukolan a bayaran antis na <span class="entity entity-date">April 15, 2025</span>. Anggapo lay atrasado a balanse.'
+        },
+        war: {
+            label: 'Waray',
+            text: 'Ini usa nga billing statement tikang ha <span class="entity entity-name">MERALCO</span> para kan <span class="entity entity-name">Maria Clara Santos</span>. An bayad para ha bulan han <span class="entity entity-date">March 1–31, 2025</span> amo an <span class="entity entity-amount">₱4,832.50</span>. Kinahanglan baydan antes han <span class="entity entity-date">April 15, 2025</span>. Waray nahibilin nga balanse.'
+        },
+        eng: {
+            label: 'English',
+            text: 'This is a billing statement from <span class="entity entity-name">MERALCO</span> for <span class="entity entity-name">Maria Clara Santos</span>. The charge for <span class="entity entity-date">March 1–31, 2025</span> is <span class="entity entity-amount">₱4,832.50</span>. Payment is due before <span class="entity entity-date">April 15, 2025</span>. No outstanding previous balance.'
+        }
+    };
+
+    var resultText = document.getElementById('demo-result-text');
+    var langLabel = document.getElementById('demo-lang-label');
+    var buttons = document.querySelectorAll('.demo-dialect');
+    if (!resultText || !buttons.length) return;
+
+    buttons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var lang = this.getAttribute('data-lang');
+            var t = translations[lang];
+            if (!t) return;
+
+            buttons.forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+
+            resultText.classList.add('fading');
+            setTimeout(function() {
+                resultText.innerHTML = t.text;
+                langLabel.textContent = t.label;
+                resultText.classList.remove('fading');
+            }, 300);
+        });
+    });
+})();
+
+// Language Toggle — page UI language switcher
+(function() {
+    var toggleBtn = document.getElementById('lang-toggle-btn');
+    var dropdown = document.getElementById('lang-dropdown');
+    if (!toggleBtn || !dropdown) return;
+
+    var pageTexts = {
+        fil: {
+            heroSubtitle: 'I-scan ang dokumento, i-record ang meeting, o i-upload ang PDF — at makakuha ng matalinong buod sa sarili mong wika. Lahat on-device. Walang internet. Walang data collection.',
+            problemTitle: 'Mahirap ba intindihin ang mga dokumento?',
+            howTitle: 'Apat na hakbang lang',
+            featuresTitle: 'Lahat ng kailangan mo, nasa isang app',
+            privacyTitle: 'Ang data mo, sa iyo lang',
+            pricingTitle: 'Simple. Walang hidden fees.'
+        },
+        ceb: {
+            heroSubtitle: 'I-scan ang dokumento, i-record ang meeting, o i-upload ang PDF — ug makakuha og smart nga summary sa imong kaugalingong pinulongan. Tanan on-device. Walay internet. Walay data collection.',
+            problemTitle: 'Lisod ba sabton ang mga dokumento?',
+            howTitle: 'Upat ka lakang lang',
+            featuresTitle: 'Tanan nga kinahanglan nimo, naa sa usa ka app',
+            privacyTitle: 'Ang imong data, imo ra',
+            pricingTitle: 'Simple. Walay hidden fees.'
+        },
+        ilo: {
+            heroSubtitle: 'I-scan ti dokumento, i-record ti meeting, wenno i-upload ti PDF — ket makaala ka iti nalaka a summary iti bukodmo a pagsasao. Amin on-device. Awan internet. Awan data collection.',
+            problemTitle: 'Narigat kadi a maawatan dagiti dokumento?',
+            howTitle: 'Uppat a tukad laeng',
+            featuresTitle: 'Amin a kasapulam, adda iti maysa nga app',
+            privacyTitle: 'Ti datam, kukuam laeng',
+            pricingTitle: 'Simple. Awan hidden fees.'
+        },
+        eng: {
+            heroSubtitle: 'Scan a document, record a meeting, or upload a PDF — get an intelligent summary in your own language. Everything on-device. No internet. No data collection.',
+            problemTitle: 'Struggling to understand documents?',
+            howTitle: 'Just four steps',
+            featuresTitle: 'Everything you need, in one app',
+            privacyTitle: 'Your data stays yours',
+            pricingTitle: 'Simple. No hidden fees.'
+        }
+    };
+
+    toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+    });
+
+    document.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+    });
+
+    dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+
+    dropdown.querySelectorAll('.lang-option').forEach(function(opt) {
+        opt.addEventListener('click', function() {
+            var lang = this.getAttribute('data-page-lang');
+            var texts = pageTexts[lang];
+            if (!texts) return;
+
+            dropdown.querySelectorAll('.lang-option').forEach(function(o) { o.classList.remove('active'); });
+            this.classList.add('active');
+            dropdown.classList.remove('open');
+
+            var subtitle = document.querySelector('.hero-subtitle');
+            if (subtitle) subtitle.textContent = texts.heroSubtitle;
+
+            var targets = [
+                { selector: '.problem .section-title', text: texts.problemTitle },
+                { selector: '.how-it-works .section-title', text: texts.howTitle },
+                { selector: '.features .section-title', text: texts.featuresTitle },
+                { selector: '.privacy-section .section-title', text: texts.privacyTitle },
+                { selector: '.pricing .section-title', text: texts.pricingTitle }
+            ];
+
+            targets.forEach(function(t) {
+                var el = document.querySelector(t.selector);
+                if (el) el.textContent = t.text;
+            });
+        });
     });
 })();
 </script>
