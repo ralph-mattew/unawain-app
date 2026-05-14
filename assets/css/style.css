@@ -425,7 +425,6 @@ section { position: relative; z-index: 1; transition: background-color 0.3s ease
     margin-bottom: 24px;
     letter-spacing: -1px;
     position: relative;
-    overflow: hidden;
 
     .accent {
         background: linear-gradient(90deg, var(--teal-light), var(--ginto-bright));
@@ -436,19 +435,16 @@ section { position: relative; z-index: 1; transition: background-color 0.3s ease
 }
 
 .baybayin-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    font-size: 1em;
+    display: block;
+    font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 8px;
+    margin-bottom: 12px;
     background: linear-gradient(90deg, var(--ginto-bright), #D4A855, var(--ginto-bright));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     pointer-events: none;
-    z-index: 2;
     animation: baybayinFade 1s ease-out 2.5s forwards;
 }
 
@@ -1647,6 +1643,7 @@ section { position: relative; z-index: 1; transition: background-color 0.3s ease
         a::after { display: none; }
     }
     .nav-toggle { display: block; }
+    .baybayin-overlay { font-size: 1.3rem; letter-spacing: 6px; margin-bottom: 8px; }
     .hero-tagline { font-size: 2.4rem; letter-spacing: -0.5px; }
     .hero-subtitle { font-size: 1rem; }
     .section-inner { padding: 64px 20px; }
