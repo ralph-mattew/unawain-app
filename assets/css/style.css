@@ -731,7 +731,7 @@ section { position: relative; z-index: 1; transition: background-color 0.3s ease
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     text-align: center;
 }
@@ -1616,7 +1616,7 @@ section { position: relative; z-index: 1; transition: background-color 0.3s ease
     .privacy-grid { grid-template-columns: 1fr; }
     .pricing-cards { grid-template-columns: 1fr; max-width: 380px; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .carousel-track { height: 540px; }
     .mockup-frame { width: 240px; }
     .carousel-slide[data-position="left-1"] { transform: translateX(-180px) scale(0.75) rotateY(12deg); }
